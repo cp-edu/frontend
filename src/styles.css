@@ -1,1 +1,101 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Rubik");
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+@import url('https://fonts.cdnfonts.com/css/noto-sans-syriac-eastern');
+
+* {
+  line-height:                 100%;
+  box-sizing:                  border-box;
+  margin:                      0;
+  padding:                     0;
+  caret-color:                 transparent;
+  font-family:                 var(--ff-inter);
+  -webkit-tap-highlight-color: transparent;
+  color:                       var(--main-text-color);
+  user-select:                 none;
+  height:                      fit-content;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  width:   0;
+}
+
+html, body {
+  width:           100vw;
+  scroll-behavior: smooth;
+  min-height:      100vh;
+  overflow-x:      hidden;
+  overflow-y:      hidden;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  display:          flex;
+  flex-wrap:        wrap;
+  position:         relative;
+}
+
+
+li {
+  list-style-type: none;
+}
+
+input, button, select {
+  outline-offset: 0;
+  outline:        0;
+}
+
+img {
+  -moz-user-select:    none;
+  -webkit-user-select: none;
+  user-select:         none;
+  pointer-events:      none;
+}
+
+:root { /* fonts */
+  --ff-rubik: "Rubik", sans-serif;
+  --ff-noto:  "Noto Sans Syriac Eastern", sans-serif;
+  --ff-inter: "Inter", sans-serif;
+}
+
+:root { /* default colors */
+  --blue:    #0284ff;
+  --blue-2:  #2300f7;
+  --blue-3:  #121d39;
+  --black:   #000000;
+  --white:   #ffffff;
+  --gray-b6: #b6b6b6;
+}
+
+:root[theme='light'] { /* colors[white-theme] */
+  --body-bg-color:   var(--white);
+  --main-text-color: var(--black);
+}
+
+:root[theme="dark"] { /* colors[dark-theme] */
+  --body-bg-color:             var(--black);
+  --main-text-color:           var(--white);
+  --top-bar-background:        var(--top-bar-background-closed);
+  --top-bar-background-opened: var(--slide-menu-background);
+  --top-bar-background-closed: var(--black);
+  --top-bar-hamburger-color:   var(--white);
+  --slide-menu-background:     var(--blue);
+  --slide-bar-links-color: var(--white);
+  --slide-bar-active-link-color: var(--black);
+  --top-bar-links-color: var(--white);
+}
+
+:root { /* sizes */
+  --top-bar-height:                var(--top-bar-height_opened);
+  --top-bar-height_opened:         100px;
+  --top-bar-height_closed:         80px;
+  --bottom-bar-height:             400px;
+  --max-main-width:                1440px;
+  --top-bar-hamburger-size:        40px;
+  --top-bar-hamburger-line-height: 5px;
+}
+
+:root { /* transition duration times */
+  --slow-transition-time: .6s;
+  --fast-transition-time: .3s;
+}

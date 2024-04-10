@@ -1,0 +1,13 @@
+.main {
+  width: 100vw;
+  height: calc(100vh - var(--top-bar-height));
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: height var(--fast-transition-time) linear;
+}
+
+.scroll {
+  width: 100vw;
+  height: fit-content;
+  background: linear-gradient(#fff, #000);
+}
