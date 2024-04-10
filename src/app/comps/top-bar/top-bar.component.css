@@ -1,0 +1,109 @@
+.main {
+  width:            100vw;
+  height:           var(--top-bar-height);
+  background-color: var(--top-bar-background);
+  display:          flex;
+  flex-direction:   row;
+  justify-content:  space-between;
+  padding:          0 0 0 20px;
+  transition:       height var(--slow-transition-time) linear, background-color var(--slow-transition-time) linear;
+  position:         relative;
+}
+
+.main > * {
+  z-index: 1003;
+}
+
+.block {
+  height:         100%;
+  display:        flex;
+  flex-direction: row;
+  align-items:    center;
+  align-content:  center;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logo > p {
+  font-size:   40px;
+  font-weight: 600;
+}
+
+.nav-container {
+  height:         100%;
+  display:        flex;
+  flex-direction: row;
+}
+
+.nav {
+  height:         100%;
+  display:        flex;
+  flex-direction: row;
+  align-items:    center;
+  align-content:  center;
+  transition:     transform var(--fast-transition-time) linear;
+  z-index:        1005;
+  gap:            20px;
+
+  @media screen and (max-width: 750px) {
+    display: none!important;
+  }
+}
+
+.link {
+  cursor: pointer;
+}
+
+.link > p {
+  color: var(--top-bar-links-color);
+}
+
+.hamburger_container {
+  width:           var(--top-bar-hamburger-size);
+  height:          100%;
+  box-sizing:      content-box;
+  padding:         0 30px;
+  background:      var(--top-bar-background);
+  display:         flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items:     center;
+  align-content:   center;
+  z-index:         1010;
+  transition:      background-color var(--slow-transition-time) linear;
+}
+
+.hamburger {
+  width:           var(--top-bar-hamburger-size);
+  height:          var(--top-bar-hamburger-size);
+  display:         flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items:     flex-end;
+  align-content:   flex-end;
+  gap:             8px;
+  cursor:          pointer;
+}
+
+.hamburger > .line {
+  width:         var(--open-line-width);
+  height:        var(--top-bar-hamburger-line-height);
+  background:    var(--top-bar-hamburger-color);
+  border-radius: 0px;
+  transition:    width .3s linear;
+}
+
+.hamburger > .line:nth-child(2) {
+  width: var(--close-line-width);
+}
+
+.hamburger:hover > .line:nth-child(2) {
+  width: var(--open-line-width);
+}
+
+:host {
+  --open-line-width:  var(--top-bar-hamburger-size);
+  --close-line-width: 15px;
+}
