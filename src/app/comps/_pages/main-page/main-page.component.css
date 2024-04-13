@@ -1,0 +1,184 @@
+.main {
+  width:          100%;
+  height:         fit-content;
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  align-content:  center;
+  position: relative;
+  padding-bottom: var(--main-block-padding-bottom);
+}
+
+.block {
+  width:   100%;
+  height:  fit-content;
+  padding: 10vh var(--block-padding);
+}
+
+.block-header {
+  display:                   flex;
+  flex-direction:            column;
+  justify-content:           flex-start;
+  background-color:          var(--main-background-slight-dark);
+  border-bottom-left-radius: var(--block-border-radius);
+}
+
+.block-header > .header {
+  font-weight:   700;
+  margin-bottom: 30px;
+  max-width: calc(100vw - var(--floating-text-size) - var(--block-padding));
+  @media screen and (max-width: 1100px) {
+    max-width: 100%;
+  }
+}
+
+.block-header > .text {
+  max-width:  500px;
+  text-align: start;
+}
+
+.block-header-info {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.floating-text {
+  width:     fit-content;
+  height:    fit-content;
+  position:  absolute;
+  transform: rotate(90deg);
+
+  @media screen and (max-width: 1100px) {
+    padding:   10vh 10vw;
+    width:     100%;
+    position:  relative;
+    transform: none;
+    top:       0;
+    left:      0;
+  }
+}
+
+.floating-text1 {
+  top:   400px;
+  right: 0;
+}
+
+.floating-text > p {
+  white-space: nowrap;
+
+  @media screen and (max-width: 900px) {
+    white-space: pre-wrap;
+  }
+}
+
+.empty-text {
+  color:               transparent;
+  -webkit-text-stroke: 1px var(--slide-bar-links-color);
+}
+
+.about-us-block__container {
+  width:            100%;
+  background-color: transparent;
+  padding:          0;
+}
+
+.colored-font {
+  position:     relative;
+  padding-left: 10px;
+}
+
+.colored-font > * {
+  z-index:  1;
+  position: relative;
+}
+
+.colored-font::after {
+  content:          "";
+  position:         absolute;
+  top:              0;
+  left:             0;
+  width:            0;
+  height:           100%;
+  background-color: var(--colored-font-color);
+  animation: colored-font-appear 1s forwards;
+  animation-delay: .3s;
+}
+
+@keyframes colored-font-appear {
+  from { width: 0; }
+  to { width: 70%; }
+}
+
+.about-us-block__top-part {
+  width:          100%;
+  height:         var(--about-us-top-block-height);
+  display:        flex;
+  flex-direction: row;
+}
+
+.about-us-block-top-left-part {
+  width:            fit-content;
+  height:           var(--about-us-top-block-height);
+  background-color: var(--main-background-slight-dark);
+}
+
+.about-us-block-top-left-content {
+  width:                   fit-content;
+  height:                  100%;
+  background-color:        var(--body-bg-color);
+  border-top-right-radius: var(--block-border-radius);
+  padding-left:            var(--block-padding);
+  padding-top:             100px;
+  padding-right:           var(--block-padding);
+  white-space:             nowrap;
+}
+
+.about-us-block-top-right-part {
+  width:                      100%;
+  height:                     80%;
+  background-color:           var(--main-background-slight-dark);
+  border-bottom-left-radius:  var(--block-border-radius);
+  border-bottom-right-radius: var(--block-border-radius);
+}
+
+.about-us-block__bottom-content {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--body-bg-color);
+  display: table;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0;
+  padding: 50px var(--block-padding) 0;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+}
+
+.about-us-block__card {
+  display: table-cell;
+  border-right: 2px solid var(--border-light);
+  border-radius: var(--block-border-radius);
+  padding: 20px;
+  filter: brightness(.7);
+  transition-property: filter;
+  transition-duration: var(--fast-transition-time);
+}
+
+.about-us-block__bottom-content:has(.about-us-block__card:hover) > .about-us-block__card {
+  filter: brightness(.4);
+}
+
+.about-us-block__card:hover {
+  filter: brightness(1) !important;
+}
+
+:host {
+  --block-padding:             10vw;
+  --about-us-top-block-height: 150px;
+  --floating-text-size: 350px;
+  --floating-text-right: 150px;
+  --main-block-padding-bottom: 100px;
+}
