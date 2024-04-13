@@ -1,13 +1,17 @@
 .main {
-  width:            100vw;
-  height:           var(--top-bar-height);
-  background-color: var(--top-bar-background);
-  display:          flex;
-  flex-direction:   row;
-  justify-content:  space-between;
-  padding:          0 0 0 20px;
-  transition:       height var(--slow-transition-time) linear, background-color var(--slow-transition-time) linear;
-  position:         relative;
+  width:                   100%;
+  height:                  var(--top-bar-height);
+  background-color:        var(--top-bar-background);
+  display:                 flex;
+  flex-direction:          row;
+  justify-content:         space-between;
+  padding:                 0 0 0 20px;
+  transition-property:     height, background-color;
+  transition-duration:     var(--slow-transition-time);
+  position:                relative;
+  border-top-right-radius: var(--block-border-radius);
+  border-top-left-radius:  var(--block-border-radius);
+  overflow:                hidden;
 }
 
 .main > * {
@@ -48,7 +52,7 @@
   gap:            20px;
 
   @media screen and (max-width: 750px) {
-    display: none!important;
+    display: none !important;
   }
 }
 
@@ -61,18 +65,19 @@
 }
 
 .hamburger_container {
-  width:           var(--top-bar-hamburger-size);
-  height:          100%;
-  box-sizing:      content-box;
-  padding:         0 30px;
-  background:      var(--top-bar-background);
-  display:         flex;
-  flex-direction:  column;
-  justify-content: center;
-  align-items:     center;
-  align-content:   center;
-  z-index:         1010;
-  transition:      background-color var(--slow-transition-time) linear;
+  width:               var(--top-bar-hamburger-size);
+  height:              100%;
+  box-sizing:          content-box;
+  padding:             0 30px;
+  background:          var(--top-bar-background);
+  display:             flex;
+  flex-direction:      column;
+  justify-content:     center;
+  align-items:         center;
+  align-content:       center;
+  z-index:             1010;
+  transition-property: background-color;
+  transition-duration: var(--slow-transition-time);
 }
 
 .hamburger {
@@ -100,7 +105,7 @@
 }
 
 .hamburger:hover > .line:nth-child(2) {
-  width: var(--open-line-width);
+  width: var(--open-line-width) !important;
 }
 
 :host {

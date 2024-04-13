@@ -38,9 +38,13 @@ export class TopBarComponent implements AfterViewInit {
       if (roller.scrollTop === 0) {
         document.documentElement.style.setProperty('--top-bar-height', 'var(--top-bar-height_opened)');
         this.SlideNavIn();
+        this.main.style.borderBottomLeftRadius = '0';
+        this.main.style.borderBottomRightRadius = '0';
       } else {
         document.documentElement.style.setProperty('--top-bar-height', 'var(--top-bar-height_closed)');
         this.SlideNavOut();
+        this.main.style.borderBottomLeftRadius = 'var(--block-border-radius)';
+        this.main.style.borderBottomRightRadius = 'var(--block-border-radius)';
       }
     });
   }
@@ -54,6 +58,8 @@ export class TopBarComponent implements AfterViewInit {
 
 
   SlideNavIn() {
+    const roller = document.getElementById('main-scroll')!;
+    if (roller.scrollTop !== 0) return;
     this.nav.style.display = 'flex';
     setTimeout(()=>{
       this.nav.style.transform = 'translateX(0)';
