@@ -101,4 +101,8 @@ export class TopBarComponent implements AfterViewInit {
     }, SlideMenuComponent.CloseTime);
   }
 
+  navigate(link:string) {
+    this.CloseSlideMenu();
+    this.router.navigate(link);
+  }
 }

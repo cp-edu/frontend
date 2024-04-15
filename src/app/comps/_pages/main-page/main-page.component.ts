@@ -20,10 +20,18 @@ export class MainPageComponent implements AfterViewInit {
   }
 
   MoveFloatingText() {
+    const scroll = document.getElementById('main-scroll')!;
     for (const e of this.floating_texts) {
       e.style.right = `calc(var(--floating-text-right) - ${(e.offsetWidth - e.offsetHeight) / 2}px)`;
-      console.log(e.offsetWidth);
     }
+
+    scroll.addEventListener('scroll', ()=>{
+      for (const e of this.floating_texts) {
+        console.log(scroll.scrollTop);
+        e.style.transform = `rotate(90deg) translateX(-${scroll.scrollTop/10}px)`;
+        console.log(e.style.transform);
+      }
+    })
   }
 
   ScrollToView(e: any) {

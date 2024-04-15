@@ -1,12 +1,12 @@
 <main class="main" #main>
 
-  <div (click)="router.navigate('')" class="logo block">
+  <div (click)="navigate('')" class="logo block">
     <p>Algoverse</p>
   </div>
 
   <div class="nav-container">
     <nav class="nav" #nav>
-      <div class="link" (click)="router.navigate(route.url)" *ngFor="let route of routes">
+      <div class="link" (click)="navigate(route.url)" *ngFor="let route of routes">
         <p>{{route.name}}</p>
       </div>
     </nav>
