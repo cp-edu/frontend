@@ -1,14 +1,23 @@
 <main class="main">
 
   <div class="block block-header">
-    <p class="header font-size-xxxlarge">Hey you, wanna change?</p>
+    <p class="header font-size-xxxlarge">
+      Hey you, wanna<br>change?
+    </p>
     <p class="text font-size-medium">
       You can start from learning new languages or solving tasks in olympiad
       programming to prepare for big competitions.
     </p>
+
+    <div (click)="ScrollToView(this.learn_more_container)" class="learn-more-btn">
+      <button class="svg-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      </button>
+      <button class="text-btn"><p class="font-size-medium">Learn more</p></button>
+    </div>
   </div>
 
-  <div class="block about-us-block__container">
+  <div class="block about-us-block__container" #learn_more_container>
     <div class="about-us-block__top-part">
       <div class="about-us-block-top-left-part">
         <div class="about-us-block-top-left-content">
@@ -20,15 +29,24 @@
 
     <div class="about-us-block__bottom-content">
       <div class="about-us-block__card">
-        <p class="card-header font-size-large fw-600">Amazing problems</p>
+        <div class="card-header-container">
+          <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 14.995a.5.5 0 0 1-.5-.5c0-3.309-2.691-6-6-6a.5.5 0 0 1 0-1c3.309 0 6-2.691 6-6a.5.5 0 0 1 1 0c0 3.309 2.691 6 6 6a.5.5 0 0 1 0 1c-3.309 0-6 2.691-6 6a.5.5 0 0 1-.5.5zm-3.901-7A7.037 7.037 0 0 1 7.5 11.896a7.037 7.037 0 0 1 3.901-3.901A7.037 7.037 0 0 1 7.5 4.094a7.037 7.037 0 0 1-3.901 3.901zM16.25 22.995a.5.5 0 0 1-.5-.5c0-2.757-2.243-5-5-5a.5.5 0 0 1 0-1c2.757 0 5-2.243 5-5a.5.5 0 0 1 1 0c0 2.757 2.243 5 5 5a.5.5 0 0 1 0 1c-2.757 0-5 2.243-5 5a.5.5 0 0 1-.5.5zm-3.103-6a6.037 6.037 0 0 1 3.103 3.103 6.037 6.037 0 0 1 3.103-3.103 6.037 6.037 0 0 1-3.103-3.103 6.033 6.033 0 0 1-3.103 3.103zM19 9.995a.5.5 0 0 1-.5-.5c0-2.206-1.794-4-4-4a.5.5 0 0 1 0-1c2.206 0 4-1.794 4-4a.5.5 0 0 1 1 0c0 2.206 1.794 4 4 4a.5.5 0 0 1 0 1c-2.206 0-4 1.794-4 4a.5.5 0 0 1-.5.5zm-2.321-5A5.035 5.035 0 0 1 19 7.316a5.03 5.03 0 0 1 2.321-2.321A5.035 5.035 0 0 1 19 2.674a5.035 5.035 0 0 1-2.321 2.321zM5.5 23.995a.5.5 0 0 1-.5-.5c0-1.654-1.346-3-3-3a.5.5 0 0 1 0-1c1.654 0 3-1.346 3-3a.5.5 0 0 1 1 0c0 1.654 1.346 3 3 3a.5.5 0 0 1 0 1c-1.654 0-3 1.346-3 3a.5.5 0 0 1-.5.5zm-1.564-4c.656.364 1.2.908 1.564 1.565a4.022 4.022 0 0 1 1.564-1.565A4.022 4.022 0 0 1 5.5 18.43a4.022 4.022 0 0 1-1.564 1.565z"/></svg>
+          <p class="card-header font-size-large fw-600">Amazing problems</p>
+        </div>
         <p class="font-size-medium">Our service provide interesting problems and amazing problemsets. You will definitely enjoy solving them.</p>
       </div>
       <div class="about-us-block__card">
-        <p class="card-header font-size-large fw-600">Amazing problems</p>
+        <div class="card-header-container">
+          <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 14.995a.5.5 0 0 1-.5-.5c0-3.309-2.691-6-6-6a.5.5 0 0 1 0-1c3.309 0 6-2.691 6-6a.5.5 0 0 1 1 0c0 3.309 2.691 6 6 6a.5.5 0 0 1 0 1c-3.309 0-6 2.691-6 6a.5.5 0 0 1-.5.5zm-3.901-7A7.037 7.037 0 0 1 7.5 11.896a7.037 7.037 0 0 1 3.901-3.901A7.037 7.037 0 0 1 7.5 4.094a7.037 7.037 0 0 1-3.901 3.901zM16.25 22.995a.5.5 0 0 1-.5-.5c0-2.757-2.243-5-5-5a.5.5 0 0 1 0-1c2.757 0 5-2.243 5-5a.5.5 0 0 1 1 0c0 2.757 2.243 5 5 5a.5.5 0 0 1 0 1c-2.757 0-5 2.243-5 5a.5.5 0 0 1-.5.5zm-3.103-6a6.037 6.037 0 0 1 3.103 3.103 6.037 6.037 0 0 1 3.103-3.103 6.037 6.037 0 0 1-3.103-3.103 6.033 6.033 0 0 1-3.103 3.103zM19 9.995a.5.5 0 0 1-.5-.5c0-2.206-1.794-4-4-4a.5.5 0 0 1 0-1c2.206 0 4-1.794 4-4a.5.5 0 0 1 1 0c0 2.206 1.794 4 4 4a.5.5 0 0 1 0 1c-2.206 0-4 1.794-4 4a.5.5 0 0 1-.5.5zm-2.321-5A5.035 5.035 0 0 1 19 7.316a5.03 5.03 0 0 1 2.321-2.321A5.035 5.035 0 0 1 19 2.674a5.035 5.035 0 0 1-2.321 2.321zM5.5 23.995a.5.5 0 0 1-.5-.5c0-1.654-1.346-3-3-3a.5.5 0 0 1 0-1c1.654 0 3-1.346 3-3a.5.5 0 0 1 1 0c0 1.654 1.346 3 3 3a.5.5 0 0 1 0 1c-1.654 0-3 1.346-3 3a.5.5 0 0 1-.5.5zm-1.564-4c.656.364 1.2.908 1.564 1.565a4.022 4.022 0 0 1 1.564-1.565A4.022 4.022 0 0 1 5.5 18.43a4.022 4.022 0 0 1-1.564 1.565z"/></svg>
+          <p class="card-header font-size-large fw-600">Amazing problems</p>
+        </div>
         <p class="font-size-medium">Our service provide interesting problems and amazing problemsets. You will definitely enjoy solving them.</p>
       </div>
       <div class="about-us-block__card">
-        <p class="card-header font-size-large fw-600">Amazing problems</p>
+        <div class="card-header-container">
+          <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 14.995a.5.5 0 0 1-.5-.5c0-3.309-2.691-6-6-6a.5.5 0 0 1 0-1c3.309 0 6-2.691 6-6a.5.5 0 0 1 1 0c0 3.309 2.691 6 6 6a.5.5 0 0 1 0 1c-3.309 0-6 2.691-6 6a.5.5 0 0 1-.5.5zm-3.901-7A7.037 7.037 0 0 1 7.5 11.896a7.037 7.037 0 0 1 3.901-3.901A7.037 7.037 0 0 1 7.5 4.094a7.037 7.037 0 0 1-3.901 3.901zM16.25 22.995a.5.5 0 0 1-.5-.5c0-2.757-2.243-5-5-5a.5.5 0 0 1 0-1c2.757 0 5-2.243 5-5a.5.5 0 0 1 1 0c0 2.757 2.243 5 5 5a.5.5 0 0 1 0 1c-2.757 0-5 2.243-5 5a.5.5 0 0 1-.5.5zm-3.103-6a6.037 6.037 0 0 1 3.103 3.103 6.037 6.037 0 0 1 3.103-3.103 6.037 6.037 0 0 1-3.103-3.103 6.033 6.033 0 0 1-3.103 3.103zM19 9.995a.5.5 0 0 1-.5-.5c0-2.206-1.794-4-4-4a.5.5 0 0 1 0-1c2.206 0 4-1.794 4-4a.5.5 0 0 1 1 0c0 2.206 1.794 4 4 4a.5.5 0 0 1 0 1c-2.206 0-4 1.794-4 4a.5.5 0 0 1-.5.5zm-2.321-5A5.035 5.035 0 0 1 19 7.316a5.03 5.03 0 0 1 2.321-2.321A5.035 5.035 0 0 1 19 2.674a5.035 5.035 0 0 1-2.321 2.321zM5.5 23.995a.5.5 0 0 1-.5-.5c0-1.654-1.346-3-3-3a.5.5 0 0 1 0-1c1.654 0 3-1.346 3-3a.5.5 0 0 1 1 0c0 1.654 1.346 3 3 3a.5.5 0 0 1 0 1c-1.654 0-3 1.346-3 3a.5.5 0 0 1-.5.5zm-1.564-4c.656.364 1.2.908 1.564 1.565a4.022 4.022 0 0 1 1.564-1.565A4.022 4.022 0 0 1 5.5 18.43a4.022 4.022 0 0 1-1.564 1.565z"/></svg>
+          <p class="card-header font-size-large fw-600">Amazing problems</p>
+        </div>
         <p class="font-size-medium">Our service provide interesting problems and amazing problemsets. You will definitely enjoy solving them.</p>
       </div>
     </div>

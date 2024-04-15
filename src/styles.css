@@ -152,6 +152,7 @@ img {
   --routing-button-color: var(--white);
   --colored-font-color: var(--blue);
   --border-light: var(--white);
+  --buttons-border-color: var(--white);
 }
 
 :root { /* sizes */
